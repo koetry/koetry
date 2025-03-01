@@ -1,7 +1,7 @@
 {
-  "name": "march-eight",
+  "homepage": "https://koetry.github.io/koetry",
+  "name": "koetry",
   "version": "0.1.0",
-  "homepage": "https://koetry.github.io",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
