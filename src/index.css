@@ -9,7 +9,7 @@ body {
 
 @font-face {
   font-family: 'pixel-font';
-  src: local('pixel-font'), url(../Minecart\ LCD.ttf) format('truetype');
+  src: local('pixel-font'), url(../public/Minecart\ LCD.ttf) format('truetype');
 }
 
 code {
