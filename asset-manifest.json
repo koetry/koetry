@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/koetry/static/css/main.ddcfdc34.css",
+    "main.js": "/koetry/static/js/main.4158304c.js",
+    "static/js/453.780e62d5.chunk.js": "/koetry/static/js/453.780e62d5.chunk.js",
+    "static/media/Minecart LCD.ttf": "/koetry/static/media/Minecart LCD.e96fcb95928630a0acd4.ttf",
+    "index.html": "/koetry/index.html",
+    "main.ddcfdc34.css.map": "/koetry/static/css/main.ddcfdc34.css.map",
+    "main.4158304c.js.map": "/koetry/static/js/main.4158304c.js.map",
+    "453.780e62d5.chunk.js.map": "/koetry/static/js/453.780e62d5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ddcfdc34.css",
+    "static/js/main.4158304c.js"
+  ]
+}
