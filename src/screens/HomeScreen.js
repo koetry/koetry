@@ -11,7 +11,7 @@ export default function HomeScreen() {
             <main style={{
                 flexGrow: 1,
                 position: "relative",
-                zIndex: 1,
+                zIndex: 0,
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "flex-start",

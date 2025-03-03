@@ -5,14 +5,5 @@
     width: 100%;
     position: relative;
     background-color: black;
-    
-}
-
-.k {
-    font-size: clamp(1.5rem, 1vw, 2rem);
-    width: 100%;
-    text-align: right;
-    color: white;
-    opacity: 0.2;
-    padding-right: 3vw;
+    z-index: 3;
 }
