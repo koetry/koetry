@@ -22,9 +22,9 @@ export default function Background() {
                 flexDirection: "column",
                 width: "100vw",
                 height: "100vh",
-                position: "absolute", // добавляем абсолютное позиционирование
-                top: 0, left: 0,
-                zIndex: 0, // фон будет на заднем плане
+                position: "absolute",
+                // top: 0, left: 0,
+                zIndex: 0, 
             }}
         >
             <Line beforeWidth="10%" middleWidth="80%" afterWidth="10%" beforeColor="white" middleColor="black" afterColor="white" />

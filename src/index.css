@@ -5,6 +5,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
+  cursor: url("../public/cursor.svg") 4 4, default;
 }
 
 @font-face {

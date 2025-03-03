@@ -1,0 +1,82 @@
+.folder {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 100%;
+    max-width: 64vw;
+    border: 3px solid black;
+    background: lightgray;
+    box-shadow: 4px 4px 0 black;
+    z-index: 10;
+}
+
+.folder-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, darkblue, blue);
+    padding: 4px;
+    color: white;
+    font-size: clamp(1rem, 1vw, 1rem);
+}
+
+.controls {
+    display: flex;
+    gap: 2px;
+}
+
+.btn {
+    width: 24px;
+    height: 24px;
+    border: 2px solid black;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.btn img {
+    width: 14px;
+    height: 14px;
+}
+
+.folder-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+    height: max(24vw, 56vh);
+    gap: 2vw;
+    padding: 1vw;
+    overflow: scroll;
+}
+
+.folder-item {
+    display: flex;
+    flex-direction: column;
+    width: max(5rem, 8vh);
+    height: auto;
+    background: none;
+    border: none;    
+    cursor: inherit;
+    font-family: inherit;
+}
+
+.folder-item img {
+    width: auto;
+    height: 8vw;
+}
+
+.folder-item span {
+    font-size: clamp(0.5rem, 0.8vw, 0.6rem);
+    text-align: center;
+    color: black;
+    white-space: nowrap;
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+}
+
+.folder-item:hover {
+    /* Todo */
+}

@@ -4,6 +4,8 @@
     justify-content: center;
     width: 100%;
     position: relative;
+    background-color: black;
+    z-index: 10;
 }
 
 .header::before {
@@ -11,7 +13,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 38vw;
+    width: 5%;
     background-color: black;
 }
 .header::after {
@@ -19,7 +21,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 40vw;
+    width: 5%;
     background-color: black;
 }
 
@@ -32,9 +34,10 @@
 }
 
 .h1 {
-    font-size: 3vw;
+    font-size: clamp(1.5rem, 3vw, 3rem);
     width: 100%;
     text-align: center;
+    color: white;
 }
 
 .letter {

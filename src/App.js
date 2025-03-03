@@ -1,17 +1,15 @@
-import Background from './components/Background';
-import Header from './components/Header';
-import Navigation from './components/Navigation';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomeScreen from './screens/HomeScreen';
 
 export default function App() {
-  // npm run deploy
+  // background-color: #282c34;
   return (
-    <div style={{ height: "100vh", overflow: "hidden" }}>
-      <Header/>
-      <main style={{ position: "relative", zIndex: 1 }}>
-        {/* <AsciiBackground /> */}
-        <Background/>
-        <Navigation/>
-      </main>
-    </div>    
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/koetry/" element={<HomeScreen />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
