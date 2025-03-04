@@ -3,7 +3,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    position: relative;
+    position: absolute;
+    bottom: 0;
     background-color: black;
     z-index: 3;
 }

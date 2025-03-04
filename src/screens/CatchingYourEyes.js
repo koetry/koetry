@@ -1,13 +1,11 @@
 import Background from '../components/Background';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Computer from '../components/Computer';
-import Folder from '../components/Folder';
 
-export default function HomeScreen() {
+export default function CatchingYourEyes() {
     return (
         <div style={{ height: "100vh", display: "flex", flexDirection: "column", overflow: "hidden" }}>
-            <Header />
+            <Header word="Ловлю"/>
             <main style={{
                 flexGrow: 1,
                 position: "relative",
@@ -17,9 +15,7 @@ export default function HomeScreen() {
                 alignItems: "flex-start",
             }}>
                 <Background />
-                <Folder />
             </main>
-            <Computer />
             <Footer />
         </div>
     );

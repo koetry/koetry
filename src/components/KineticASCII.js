@@ -8,7 +8,7 @@ const KineticASCII = () => {
     const height = 20; 
     const sphere = [];
     const radius = Math.min(width, height) / 2;
-    const chars = "k01@#*K"; 
+    const chars = "01@#*KkDd"; 
 
     for (let y = 0; y < height; y++) {
       let row = "";

@@ -1,9 +1,11 @@
 .folder {
+    margin-top: 2vw;
     display: flex;
     position: absolute;
     flex-direction: column;
     width: 100%;
     max-width: 64vw;
+    height: max(32vw, 64vh);
     border: 3px solid black;
     background: lightgray;
     box-shadow: 4px 4px 0 black;
@@ -26,14 +28,13 @@
 }
 
 .btn {
-    width: 24px;
-    height: 24px;
+    width: 2vw;
+    height: 4vh;
     border: 2px solid black;
     background: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     padding: 2px;
 }
 
@@ -44,39 +45,48 @@
 
 .folder-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
-    height: max(24vw, 56vh);
-    gap: 2vw;
-    padding: 1vw;
-    overflow: scroll;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(30px, 60px));
+    min-height: 12vh;
+    height: 100%;
+    gap: 3vw;
+    padding: 0.6vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .folder-item {
     display: flex;
     flex-direction: column;
     width: max(5rem, 8vh);
-    height: auto;
+    height: 11vh;
     background: none;
     border: none;    
     cursor: inherit;
     font-family: inherit;
+    align-items: center; 
+    justify-content: flex-start;
+    overflow: hidden;
 }
 
 .folder-item img {
-    width: auto;
-    height: 8vw;
+    max-width: 100%; 
+    height: max(3vw, 8vh);
+    object-fit: contain;
 }
 
 .folder-item span {
-    font-size: clamp(0.5rem, 0.8vw, 0.6rem);
+    font-size: clamp(0.4rem, 1.5vw, 0.6rem);
     text-align: center;
     color: black;
     white-space: nowrap;
-    /* overflow: hidden; */
+    overflow: hidden;
     text-overflow: ellipsis;
+    max-width: 100%;
 }
 
+
 .folder-item:hover {
-    /* Todo */
+    background-color: #282c34;
+    opacity: 0.7;
 }

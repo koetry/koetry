@@ -2,14 +2,13 @@
 import "./Header.css";
 import { useState, useEffect } from "react";
 
-const WORD = "KOETRY";
 const RANDOM_CHARS = "@#$&*%";
-const DURATION = 70; // Скорость смены символов (мс)
-const CYCLES = 16; // Количество прокруток перед остановкой
-const LETTER_DELAY = 500; // Время между остановкой каждой буквы (мс)
+const DURATION = 70;
+const CYCLES = 16;
+const LETTER_DELAY = 500;
 
-export default function Header() {
-    const [letters, setLetters] = useState(generateRandomChars(WORD.length));
+export default function Header({ word = "Koetry" }) {
+    const [letters, setLetters] = useState(() => generateRandomChars(word.length));
 
     useEffect(() => {
         let index = 0;
@@ -21,9 +20,9 @@ export default function Header() {
                 setLetters((prev) => {
                     const newLetters = [...prev];
                     if (cycleCount < CYCLES) {
-                        newLetters[i] = getRandomChar(); // Прокрутка случайных букв
+                        newLetters[i] = getRandomChar();
                     } else {
-                        newLetters[i] = WORD[i]; // Фиксация нужной буквы
+                        newLetters[i] = word[i];
                         clearInterval(letterInterval);
                     }
                     return newLetters;
@@ -33,19 +32,19 @@ export default function Header() {
         }
 
         function startAnimation() {
-            setLetters(generateRandomChars(WORD.length)); // Сброс на случайные символы
+            setLetters(generateRandomChars(word.length)); 
             index = 0;
 
             const interval = setInterval(() => {
                 animateLetter(index);
                 index++;
 
-                if (index >= WORD.length) clearInterval(interval);
+                if (index >= word.length) clearInterval(interval);
             }, LETTER_DELAY);
         }
 
         startAnimation();
-    }, []);
+    }, [word]); // Добавлен `word` в зависимости useEffect
 
     return (
         <header className="header">

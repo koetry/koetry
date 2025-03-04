@@ -3,11 +3,12 @@ import maximize from "../res/Maximize.svg";
 import minimize from "../res/Minimize.svg";
 import close from "../res/Close.svg";
 import folder from "../res/Folder.svg";
+import { useNavigate } from "react-router-dom";
 
 export default function Folder() {
-    const handleClick = () => {
-        
-        console.log("Navigating to folder...");
+    const navigate = useNavigate();
+    const catchingYourEyesClick = () => {
+        navigate("/koetry/catching_your_eyes");
     };
 
     return (
@@ -21,9 +22,9 @@ export default function Folder() {
                 </div>
             </div>
             <div className="folder-content">
-                <button className="folder-item" onClick={handleClick}>
+                <button className="folder-item" onClick={catchingYourEyesClick}>
                     <img src={folder} alt="folder" />
-                    <span>08.03.2025</span>
+                    <span>Ловлю</span>
                 </button>
             </div>
         </div>
