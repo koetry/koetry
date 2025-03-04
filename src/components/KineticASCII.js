@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const KineticASCII = () => {
   const [rotation, setRotation] = useState(0);
+  const sphereRef = useRef("");
 
   const generateSphere = () => {
-    const width = 40; 
-    const height = 20; 
-    const sphere = [];
+    const width = 40;
+    const height = 20;
     const radius = Math.min(width, height) / 2;
-    const chars = "01@#*KkDd"; 
+    const chars = "01@#*KkDd";
+    const newSphere = [];
 
     for (let y = 0; y < height; y++) {
       let row = "";
@@ -29,9 +30,9 @@ const KineticASCII = () => {
           row += " ";
         }
       }
-      sphere.push(row);
+      newSphere.push(row);
     }
-    return sphere.join("<br/>");
+    sphereRef.current = newSphere.join("<br/>");
   };
 
   useEffect(() => {
@@ -41,6 +42,10 @@ const KineticASCII = () => {
 
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    generateSphere();
+  }, [rotation]);
 
   return (
     <div
@@ -54,7 +59,7 @@ const KineticASCII = () => {
         justifyContent: "center",
         zIndex: 5,
       }}
-      dangerouslySetInnerHTML={{ __html: generateSphere() }}
+      dangerouslySetInnerHTML={{ __html: sphereRef.current }}
     />
   );
 };

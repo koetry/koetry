@@ -44,7 +44,7 @@ export default function Header({ word = "Koetry" }) {
         }
 
         startAnimation();
-    }, [word]); // Добавлен `word` в зависимости useEffect
+    }, [word]);
 
     return (
         <header className="header">
