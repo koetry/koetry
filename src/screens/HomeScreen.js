@@ -16,7 +16,7 @@ export default function HomeScreen() {
                 justifyContent: "center",
                 alignItems: "flex-start",
             }}>
-                <Background />
+                {/* <Background /> */}
                 <Folder />
             </main>
             <Computer />

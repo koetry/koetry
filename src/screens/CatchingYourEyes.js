@@ -14,7 +14,7 @@ export default function CatchingYourEyes() {
                 justifyContent: "center",
                 alignItems: "flex-start",
             }}>
-                <Background />
+                {/* <Background /> */}
             </main>
             <Footer />
         </div>
