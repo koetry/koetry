@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/koetry/static/css/main.cdfa45b3.css",
-    "main.js": "/koetry/static/js/main.b4ce1748.js",
+    "main.js": "/koetry/static/js/main.f7ea5097.js",
     "static/js/453.479ff31b.chunk.js": "/koetry/static/js/453.479ff31b.chunk.js",
     "static/media/Minecart LCD.ttf": "/koetry/static/media/Minecart LCD.e96fcb95928630a0acd4.ttf",
     "static/media/computer.svg": "/koetry/static/media/computer.35f7d57edee85cb59186a3200fd12365.svg",
@@ -12,11 +12,11 @@
     "index.html": "/koetry/index.html",
     "static/media/cursor.svg": "/koetry/static/media/cursor.5debafe1546408c467bc.svg",
     "main.cdfa45b3.css.map": "/koetry/static/css/main.cdfa45b3.css.map",
-    "main.b4ce1748.js.map": "/koetry/static/js/main.b4ce1748.js.map",
+    "main.f7ea5097.js.map": "/koetry/static/js/main.f7ea5097.js.map",
     "453.479ff31b.chunk.js.map": "/koetry/static/js/453.479ff31b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cdfa45b3.css",
-    "static/js/main.b4ce1748.js"
+    "static/js/main.f7ea5097.js"
   ]
 }
