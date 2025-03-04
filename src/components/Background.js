@@ -1,5 +1,5 @@
 export default function Background() {
-    function Line({ beforeWidth, middleWidth, afterWidth, beforeColor, middleColor, afterColor }) {
+    function Line({ colorFrom, colorTo }) {
         return (
             <div
                 style={{
@@ -7,20 +7,15 @@ export default function Background() {
                     display: "flex",
                     flex: 1,
                     position: 'relative',
-                    background: `
-                        linear-gradient(0deg, ${beforeColor} 50%, ${middleColor} 100%),
-                        url(/noise.svg)`, 
-                    filter: "contrast(200%) brightness(200%)",
+                    background: `linear-gradient(135deg, ${colorFrom} 0%, ${colorTo} 50%, ${colorFrom} 100%)`, 
+                    filter: "contrast(150%) brightness(200%)",
                 }}
             >
                 <div
                     style={{
-                        width: beforeWidth,
-                        background: `linear-gradient(to right, ${beforeColor} 50%, ${middleColor} 100%)`,
-                        filter: "url(#noiseFilter)",
+                        width: "100%",
                         position: 'relative',
-                    }}
-                >
+                    }}>
                     <div
                         style={{
                             position: 'absolute',
@@ -33,46 +28,8 @@ export default function Background() {
                         }}
                     />
                 </div>
-                <div
-                    style={{
-                        width: middleWidth,
-                        background: `linear-gradient(to right, ${middleColor} 50%, ${afterColor} 100%)`,
-                        filter: "url(#noiseFilter)",
-                        position: 'relative',
-                    }}
-                >
-                    <div
-                        style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            right: 0,
-                            bottom: 0,
-                            background: 'transparent',
-                            filter: 'url(#noiseFilter)',
-                        }}
-                    />
-                </div>
-                <div
-                    style={{
-                        width: afterWidth,
-                        background: `linear-gradient(to right, ${afterColor} 70%, ${beforeColor} 100%)`,
-                        filter: "url(#noiseFilter)",
-                        position: 'relative',
-                    }}
-                >
-                    <div
-                        style={{
-                            position: 'absolute',
-                            top: 0,
-                            left: 0,
-                            right: 0,
-                            bottom: 0,
-                            background: 'transparent',
-                            filter: 'url(#noiseFilter)',
-                        }}
-                    />
-                </div>
+                
+            
                 <svg style={{ display: 'none' }}>
                     <filter id="noiseFilter">
                         <feTurbulence
@@ -99,22 +56,14 @@ export default function Background() {
                 zIndex: 0, 
             }}
         >
-            <Line beforeWidth="10%" middleWidth="80%" afterWidth="10%" beforeColor="white" middleColor="black" afterColor="white" />
-            <Line beforeWidth="30%" middleWidth="50%" afterWidth="20%" beforeColor="white" middleColor="black" afterColor="black" />
-            <Line beforeWidth="10%" middleWidth="80%" afterWidth="10%" beforeColor="white" middleColor="black" afterColor="black" />
-            <Line beforeWidth="30%" middleWidth="20%" afterWidth="50%" beforeColor="black" middleColor="white" afterColor="black" />
-            <Line beforeWidth="30%" middleWidth="40%" afterWidth="30%" beforeColor="white" middleColor="white" afterColor="black" />
-            <Line beforeWidth="50%" middleWidth="30%" afterWidth="20%" beforeColor="black" middleColor="white" afterColor="black" />
-            <Line beforeWidth="50%" middleWidth="10%" afterWidth="40%" beforeColor="black" middleColor="black" afterColor="black" />
-            <Line beforeWidth="50%" middleWidth="20%" afterWidth="30%" beforeColor="black" middleColor="black" afterColor="black" />
-            <Line beforeWidth="10%" middleWidth="80%" afterWidth="10%" beforeColor="white" middleColor="black" afterColor="white" />
-            <Line beforeWidth="30%" middleWidth="50%" afterWidth="20%" beforeColor="white" middleColor="black" afterColor="black" />
-            <Line beforeWidth="50%" middleWidth="30%" afterWidth="20%" beforeColor="black" middleColor="white" afterColor="black" />
-            <Line beforeWidth="50%" middleWidth="10%" afterWidth="40%" beforeColor="black" middleColor="black" afterColor="black" />
-            <Line beforeWidth="50%" middleWidth="20%" afterWidth="30%" beforeColor="black" middleColor="black" afterColor="black" />
-            <Line beforeWidth="10%" middleWidth="80%" afterWidth="10%" beforeColor="white" middleColor="black" afterColor="black" />
-            <Line beforeWidth="30%" middleWidth="20%" afterWidth="50%" beforeColor="black" middleColor="white" afterColor="black" />
-            <Line beforeWidth="30%" middleWidth="40%" afterWidth="30%" beforeColor="white" middleColor="white" afterColor="black" />
+            <Line colorFrom="black" colorTo="white" />
+            <Line colorFrom="gray" colorTo="black" />
+            <Line colorFrom="black" colorTo="white" />
+            <Line colorFrom="gray" colorTo="black" />
+            <Line colorFrom="black" colorTo="white" />
+            <Line colorFrom="gray" colorTo="black" />
+            <Line colorFrom="black" colorTo="white" />
+            <Line colorFrom="gray" colorTo="black" />
         </div>
     );
 }

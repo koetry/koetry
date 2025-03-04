@@ -1,7 +1,6 @@
 import Background from '../components/Background';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Computer from '../components/Computer';
 import Folder from '../components/Folder';
 
 export default function HomeScreen() {
@@ -16,10 +15,9 @@ export default function HomeScreen() {
                 justifyContent: "center",
                 alignItems: "flex-start",
             }}>
-                {/* <Background /> */}
+                <Background />
                 <Folder />
             </main>
-            <Computer />
             <Footer />
         </div>
     );

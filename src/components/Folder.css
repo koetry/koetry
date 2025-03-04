@@ -1,11 +1,13 @@
 .folder {
-    margin-top: 2vw;
+    margin-top: 2vh;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-bottom: 8vh;
     display: flex;
     position: absolute;
     flex-direction: column;
-    width: 100%;
-    max-width: 64vw;
-    height: max(32vw, 64vh);
+    width: calc(100% - 8vw); 
+    height: calc(100% - 10vh);
     border: 3px solid black;
     background: lightgray;
     box-shadow: 4px 4px 0 black;
@@ -16,7 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(to right, darkblue, blue);
+    background: linear-gradient(to right, black, gray);
     padding: 4px;
     color: white;
     font-size: clamp(1rem, 1vw, 1rem);
@@ -25,22 +27,6 @@
 .controls {
     display: flex;
     gap: 2px;
-}
-
-.btn {
-    width: 2vw;
-    height: 4vh;
-    border: 2px solid black;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2px;
-}
-
-.btn img {
-    width: 14px;
-    height: 14px;
 }
 
 .folder-content {
@@ -85,7 +71,15 @@
     max-width: 100%;
 }
 
-/* .folder-item:hover {
-    background-color: #282c34;
-    opacity: 0.7;
-} */
+.folder-item:hover {
+    opacity: 0.5;
+}
+
+.btn {
+    all: unset;
+    display: inline-block;
+}
+
+.btn:hover {
+    opacity: 0.5;
+}

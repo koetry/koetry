@@ -8,14 +8,22 @@ const CYCLES = 16;
 const LETTER_DELAY = 500;
 
 export default function Header({ word = "Koetry" }) {
-    const [letters, setLetters] = useState(() => generateRandomChars(word.length));
+    const [letters, setLetters] = useState(() => generateRandomChars(word));
 
     useEffect(() => {
         let index = 0;
 
         function animateLetter(i) {
-            let cycleCount = 0;
+            if (word[i] === " ") {
+                setLetters((prev) => {
+                    const newLetters = [...prev];
+                    newLetters[i] = "\u00A0";
+                    return newLetters;
+                });
+                return;
+            }
 
+            let cycleCount = 0;
             const letterInterval = setInterval(() => {
                 setLetters((prev) => {
                     const newLetters = [...prev];
@@ -32,7 +40,7 @@ export default function Header({ word = "Koetry" }) {
         }
 
         function startAnimation() {
-            setLetters(generateRandomChars(word.length)); 
+            setLetters(generateRandomChars(word));
             index = 0;
 
             const interval = setInterval(() => {
@@ -57,8 +65,8 @@ export default function Header({ word = "Koetry" }) {
     );
 }
 
-function generateRandomChars(length) {
-    return Array.from({ length }, () => getRandomChar());
+function generateRandomChars(word) {
+    return Array.from(word, (char) => (char === " " ? " " : getRandomChar()));
 }
 
 function getRandomChar() {
