@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/koetry/static/css/main.af59bbcc.css",
-    "main.js": "/koetry/static/js/main.7ad2eafd.js",
+    "main.css": "/koetry/static/css/main.8a1912a1.css",
+    "main.js": "/koetry/static/js/main.d133e684.js",
     "static/js/453.479ff31b.chunk.js": "/koetry/static/js/453.479ff31b.chunk.js",
     "static/media/Minecart LCD.ttf": "/koetry/static/media/Minecart LCD.e96fcb95928630a0acd4.ttf",
     "static/media/Close.svg": "/koetry/static/media/Close.2833912021e0f62665843d03d0f1c029.svg",
@@ -10,15 +10,16 @@
     "static/media/Explorer.svg": "/koetry/static/media/Explorer.6ea5863642146623478fbb01416b570a.svg",
     "static/media/Trash.svg": "/koetry/static/media/Trash.5473720dad28c48859e9fad9d36b2e12.svg",
     "static/media/PC.svg": "/koetry/static/media/PC.7330d4453e4c25392d50fa28e2fc1194.svg",
+    "static/media/Directory.svg": "/koetry/static/media/Directory.8af80a08e898b54360b0c925ff7ba372.svg",
     "static/media/File_txt.svg": "/koetry/static/media/File_txt.485d6c36f1804714de1bd506b77a1594.svg",
     "index.html": "/koetry/index.html",
     "static/media/cursor.svg": "/koetry/static/media/cursor.5debafe1546408c467bc.svg",
-    "main.af59bbcc.css.map": "/koetry/static/css/main.af59bbcc.css.map",
-    "main.7ad2eafd.js.map": "/koetry/static/js/main.7ad2eafd.js.map",
+    "main.8a1912a1.css.map": "/koetry/static/css/main.8a1912a1.css.map",
+    "main.d133e684.js.map": "/koetry/static/js/main.d133e684.js.map",
     "453.479ff31b.chunk.js.map": "/koetry/static/js/453.479ff31b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.af59bbcc.css",
-    "static/js/main.7ad2eafd.js"
+    "static/css/main.8a1912a1.css",
+    "static/js/main.d133e684.js"
   ]
 }
