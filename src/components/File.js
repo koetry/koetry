@@ -4,12 +4,14 @@ import minimize from "../res/actions/Minimize.svg";
 import close from "../res/actions/Close.svg";
 import { useNavigate } from "react-router-dom";
 
-export default function File({title}) {
+export default function File({title, text}) {
 
     const navigate = useNavigate();
     const backClick = () => {
-        navigate("/koetry");
+        navigate(-1);
     };
+
+    const textLines = text.split('\n');
 
     return (
         <div className="file">
@@ -28,7 +30,9 @@ export default function File({title}) {
                 <span>Help</span>
             </div>
             <div className="text">
-                <span>text</span>
+                {textLines.map((line, index) => (
+                    <span key={index}>{line}</span>
+                ))}
             </div>
         </div>
     );

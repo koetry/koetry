@@ -1,32 +1,47 @@
 import "./Folder.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import maximize from "../res/actions/Maximize.svg";
 import minimize from "../res/actions/Minimize.svg";
 import close from "../res/actions/Close.svg";
-import fileTxt from "../res/windows_components/File_txt.svg";
+import folder from "../res/windows_components/Directory.svg";
 import pc from "../res/windows_components/PC.svg";
 import explorer from "../res/windows_components/Explorer.svg";
 import trash from "../res/windows_components/Trash.svg";
+import AlertDialog from "../components/AlertDialog";
 
 export default function Folder() {
     const navigate = useNavigate();
-    const catchingYourEyesClick = () => {
-        navigate("/koetry/catching_your_eyes");
+    const [alertData, setAlertData] = useState({ message: "", icon: null });
+    const [isAlertOpen, setIsAlertOpen] = useState(false);
+    
+    const showAlert = (message, icon) => {
+        setAlertData({ message, icon });
+        setIsAlertOpen(true);
+    };
+    
+    const closeAlert = () => {
+        setIsAlertOpen(false);
+    };
+    
+
+    const lettersForDClick = () => {
+        navigate("/koetry/letters_for_d");
     };
     const pcClick = () => {
-        console.log("pc click");
+        showAlert("Диск С: заполнен на 90%...", pc);
     };
     const explorerClick = () => {
-        console.log("explorer click");
+        showAlert("Нет доступа к интернету...", explorer);
     };
     const trashClick = () => {
-        console.log("trash click");
+        showAlert("Корзина пока пуста, но скоро тут что-нибудь будет...", trash);
     };
 
     return (
         <div className="folder">
             <div className="folder-header">
-                <span className="title">Title</span>
+                <span className="title">K</span>
                 <div className="controls">
                 <img className="btn" src={minimize} />
                 <img className="btn" src={maximize} />
@@ -42,9 +57,9 @@ export default function Folder() {
                     <img src={explorer} alt="explorer" />
                     <span>Internet Explorer</span>
                 </button>
-                <button className="folder-item" onClick={catchingYourEyesClick}>
-                    <img src={fileTxt} alt="folder" />
-                    <span>Ловлю твои глаза.txt</span>
+                <button className="folder-item" onClick={lettersForDClick}>
+                    <img src={folder} alt="folder" />
+                    <span>Письма для Д.</span>
                 </button>
                 
                 <button className="folder-item" onClick={trashClick}>
@@ -52,6 +67,7 @@ export default function Folder() {
                     <span>Корзина</span>
                 </button>
             </div>
+            {isAlertOpen && (<AlertDialog message={alertData.message} icon={alertData.icon} onClose={closeAlert} />)}
         </div>
     );
 }

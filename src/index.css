@@ -16,3 +16,19 @@ html, body {
 code {
   font-family: "pixel-font";
 }
+
+@media (max-width: 768px) {
+  *:hover,
+  *::before:hover,
+  *::after:hover {
+      opacity: inherit !important;
+      color: inherit !important;
+      background-color: inherit !important;
+      box-shadow: inherit !important;
+      transform: inherit !important;
+      transition: none !important;
+  }
+  html, body {
+    cursor: default !important;
+  }
+}
