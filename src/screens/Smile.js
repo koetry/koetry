@@ -5,7 +5,7 @@ import File from '../components/File';
 
 export default function Smile() {
     const sep = "\n";
-    const p1 = "Ловлю твои зрачки своими в темноте.\nЛюблю, когда твоя улыбка сияет ярче всех других вдвойне";
+    const p1 = "28*&@!973@)^598^^25\n*Q#****!#@%)**KKK#@&^%";
 
     const text = p1 + sep;
 
