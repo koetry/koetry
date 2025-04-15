@@ -41,7 +41,7 @@ export default function LettersForD() {
                         <img className="btn" src={close} onClick={backClick} />
                         </div>
                     </div>
-                    <div className="folder-content">
+                    {/* <div className="folder-content">
                         <button className="folder-item" onClick={smileClick}>
                             <img src={fileTxt} />
                             <span>Улыбка.txt</span>
@@ -50,7 +50,7 @@ export default function LettersForD() {
                             <img src={fileTxt} />
                             <span>Весна.txt</span>
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </main>
             <Footer />
